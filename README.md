@@ -30,14 +30,14 @@ git clone https://github.com/solidfi/vgs-collect-ios.git
 
 In order to start the project we need below parameters. All fields are mendatory
 
-VGSVaultID : Talk to our solutions team (solutions@solidfi.com) to get the ID via a secured method. (It will different base on sandbox          and live)
-CardID : Id of your card
-CardToken : You will get it from the "pintoken" api from the backend
-Environment :  Select live or sandbox environment
-Last4CardDigit : Last 4 didit of card number
-ExpMonth : Expiry month (MM) of the card
-ExpYear : Expiry year (YYYY) of the card
-4DigitPin : Pin you want to set for the card (It should be numeric)
+- VGSVaultID : Talk to our solutions team (solutions@solidfi.com) to get the ID via a secured method. (It will different base on sandbox and live)
+- CardID : Id of your card
+- CardToken : You will get it from the "pintoken" api from the backend
+- Environment :  Select live or sandbox environment
+- Last4CardDigit : Last 4 didit of card number
+- ExpMonth : Expiry month (MM) of the card
+- ExpYear : Expiry year (YYYY) of the card
+- 4DigitPin : Pin you want to set for the card (It should be numeric)
 
 Notes: CardToken can be used only once to set pin. You need to call "pintoken" api to generate new CardToken    
 
