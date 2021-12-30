@@ -1,0 +1,707 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA17D06A277C63040039063C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17D069277C63040039063C /* AppDelegate.swift */; };
+		DA17D06E277C63040039063C /* VGSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17D06D277C63040039063C /* VGSController.swift */; };
+		DA17D071277C63040039063C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA17D06F277C63040039063C /* Main.storyboard */; };
+		DA17D073277C63060039063C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA17D072277C63060039063C /* Assets.xcassets */; };
+		DA17D076277C63060039063C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA17D074277C63060039063C /* LaunchScreen.storyboard */; };
+		DA17D081277C63060039063C /* vgsCollectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17D080277C63060039063C /* vgsCollectTests.swift */; };
+		DA17D08B277C63060039063C /* vgsCollectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17D08A277C63060039063C /* vgsCollectUITests.swift */; };
+		DA17D08D277C63060039063C /* vgsCollectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17D08C277C63060039063C /* vgsCollectUITestsLaunchTests.swift */; };
+		DA17D09B277C84220039063C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DA17D09A277C84220039063C /* IQKeyboardManagerSwift */; };
+		DA17D09E277C846C0039063C /* VGSCollectSDK in Frameworks */ = {isa = PBXBuildFile; productRef = DA17D09D277C846C0039063C /* VGSCollectSDK */; };
+		DA17D0A0277C8C2A0039063C /* VGSModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17D09F277C8C2A0039063C /* VGSModalView.swift */; };
+		DA17D0A2277C98AC0039063C /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17D0A1277C98AC0039063C /* Extension+String.swift */; };
+		DAB5621C277D8054001B997B /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = DAB5621B277D8054001B997B /* MBProgressHUD */; };
+		DAB5621F277D852F001B997B /* VGSShowSDK in Frameworks */ = {isa = PBXBuildFile; productRef = DAB5621E277D852F001B997B /* VGSShowSDK */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA17D07D277C63060039063C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA17D05E277C63040039063C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA17D065277C63040039063C;
+			remoteInfo = vgsCollect;
+		};
+		DA17D087277C63060039063C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA17D05E277C63040039063C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA17D065277C63040039063C;
+			remoteInfo = vgsCollect;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DA17D066277C63040039063C /* vgsCollect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vgsCollect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA17D069277C63040039063C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DA17D06D277C63040039063C /* VGSController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGSController.swift; sourceTree = "<group>"; };
+		DA17D070277C63040039063C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DA17D072277C63060039063C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA17D075277C63060039063C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DA17D077277C63060039063C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA17D07C277C63060039063C /* vgsCollectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vgsCollectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA17D080277C63060039063C /* vgsCollectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vgsCollectTests.swift; sourceTree = "<group>"; };
+		DA17D086277C63060039063C /* vgsCollectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vgsCollectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA17D08A277C63060039063C /* vgsCollectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vgsCollectUITests.swift; sourceTree = "<group>"; };
+		DA17D08C277C63060039063C /* vgsCollectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vgsCollectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DA17D09F277C8C2A0039063C /* VGSModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGSModalView.swift; sourceTree = "<group>"; };
+		DA17D0A1277C98AC0039063C /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA17D063277C63040039063C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAB5621C277D8054001B997B /* MBProgressHUD in Frameworks */,
+				DAB5621F277D852F001B997B /* VGSShowSDK in Frameworks */,
+				DA17D09B277C84220039063C /* IQKeyboardManagerSwift in Frameworks */,
+				DA17D09E277C846C0039063C /* VGSCollectSDK in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA17D079277C63060039063C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA17D083277C63060039063C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA17D05D277C63040039063C = {
+			isa = PBXGroup;
+			children = (
+				DA17D068277C63040039063C /* vgsCollect */,
+				DA17D07F277C63060039063C /* vgsCollectTests */,
+				DA17D089277C63060039063C /* vgsCollectUITests */,
+				DA17D067277C63040039063C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA17D067277C63040039063C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA17D066277C63040039063C /* vgsCollect.app */,
+				DA17D07C277C63060039063C /* vgsCollectTests.xctest */,
+				DA17D086277C63060039063C /* vgsCollectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA17D068277C63040039063C /* vgsCollect */ = {
+			isa = PBXGroup;
+			children = (
+				DA17D069277C63040039063C /* AppDelegate.swift */,
+				DA17D06D277C63040039063C /* VGSController.swift */,
+				DA17D09F277C8C2A0039063C /* VGSModalView.swift */,
+				DA17D0A1277C98AC0039063C /* Extension+String.swift */,
+				DA17D06F277C63040039063C /* Main.storyboard */,
+				DA17D072277C63060039063C /* Assets.xcassets */,
+				DA17D074277C63060039063C /* LaunchScreen.storyboard */,
+				DA17D077277C63060039063C /* Info.plist */,
+			);
+			path = vgsCollect;
+			sourceTree = "<group>";
+		};
+		DA17D07F277C63060039063C /* vgsCollectTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA17D080277C63060039063C /* vgsCollectTests.swift */,
+			);
+			path = vgsCollectTests;
+			sourceTree = "<group>";
+		};
+		DA17D089277C63060039063C /* vgsCollectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DA17D08A277C63060039063C /* vgsCollectUITests.swift */,
+				DA17D08C277C63060039063C /* vgsCollectUITestsLaunchTests.swift */,
+			);
+			path = vgsCollectUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA17D065277C63040039063C /* vgsCollect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA17D090277C63060039063C /* Build configuration list for PBXNativeTarget "vgsCollect" */;
+			buildPhases = (
+				DA17D062277C63040039063C /* Sources */,
+				DA17D063277C63040039063C /* Frameworks */,
+				DA17D064277C63040039063C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = vgsCollect;
+			packageProductDependencies = (
+				DA17D09A277C84220039063C /* IQKeyboardManagerSwift */,
+				DA17D09D277C846C0039063C /* VGSCollectSDK */,
+				DAB5621B277D8054001B997B /* MBProgressHUD */,
+				DAB5621E277D852F001B997B /* VGSShowSDK */,
+			);
+			productName = vgsCollect;
+			productReference = DA17D066277C63040039063C /* vgsCollect.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA17D07B277C63060039063C /* vgsCollectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA17D093277C63060039063C /* Build configuration list for PBXNativeTarget "vgsCollectTests" */;
+			buildPhases = (
+				DA17D078277C63060039063C /* Sources */,
+				DA17D079277C63060039063C /* Frameworks */,
+				DA17D07A277C63060039063C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA17D07E277C63060039063C /* PBXTargetDependency */,
+			);
+			name = vgsCollectTests;
+			productName = vgsCollectTests;
+			productReference = DA17D07C277C63060039063C /* vgsCollectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DA17D085277C63060039063C /* vgsCollectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA17D096277C63060039063C /* Build configuration list for PBXNativeTarget "vgsCollectUITests" */;
+			buildPhases = (
+				DA17D082277C63060039063C /* Sources */,
+				DA17D083277C63060039063C /* Frameworks */,
+				DA17D084277C63060039063C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA17D088277C63060039063C /* PBXTargetDependency */,
+			);
+			name = vgsCollectUITests;
+			productName = vgsCollectUITests;
+			productReference = DA17D086277C63060039063C /* vgsCollectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA17D05E277C63040039063C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					DA17D065277C63040039063C = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					DA17D07B277C63060039063C = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = DA17D065277C63040039063C;
+					};
+					DA17D085277C63060039063C = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = DA17D065277C63040039063C;
+					};
+				};
+			};
+			buildConfigurationList = DA17D061277C63040039063C /* Build configuration list for PBXProject "vgsCollect" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA17D05D277C63040039063C;
+			packageReferences = (
+				DA17D099277C84220039063C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				DA17D09C277C846C0039063C /* XCRemoteSwiftPackageReference "vgs-collect-ios" */,
+				DAB5621A277D8054001B997B /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
+				DAB5621D277D852F001B997B /* XCRemoteSwiftPackageReference "vgs-show-ios" */,
+			);
+			productRefGroup = DA17D067277C63040039063C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA17D065277C63040039063C /* vgsCollect */,
+				DA17D07B277C63060039063C /* vgsCollectTests */,
+				DA17D085277C63060039063C /* vgsCollectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA17D064277C63040039063C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA17D076277C63060039063C /* LaunchScreen.storyboard in Resources */,
+				DA17D073277C63060039063C /* Assets.xcassets in Resources */,
+				DA17D071277C63040039063C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA17D07A277C63060039063C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA17D084277C63060039063C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA17D062277C63040039063C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA17D0A2277C98AC0039063C /* Extension+String.swift in Sources */,
+				DA17D06E277C63040039063C /* VGSController.swift in Sources */,
+				DA17D06A277C63040039063C /* AppDelegate.swift in Sources */,
+				DA17D0A0277C8C2A0039063C /* VGSModalView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA17D078277C63060039063C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA17D081277C63060039063C /* vgsCollectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA17D082277C63060039063C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA17D08D277C63060039063C /* vgsCollectUITestsLaunchTests.swift in Sources */,
+				DA17D08B277C63060039063C /* vgsCollectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA17D07E277C63060039063C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA17D065277C63040039063C /* vgsCollect */;
+			targetProxy = DA17D07D277C63060039063C /* PBXContainerItemProxy */;
+		};
+		DA17D088277C63060039063C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA17D065277C63040039063C /* vgsCollect */;
+			targetProxy = DA17D087277C63060039063C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA17D06F277C63040039063C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA17D070277C63040039063C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DA17D074277C63060039063C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA17D075277C63060039063C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA17D08E277C63060039063C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DA17D08F277C63060039063C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA17D091277C63060039063C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = vgsCollect/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "VGS Collect Sample";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.solid.app.vgsCollect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA17D092277C63060039063C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = vgsCollect/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "VGS Collect Sample";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.solid.app.vgsCollect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DA17D094277C63060039063C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.solid.app.vgsCollectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vgsCollect.app/vgsCollect";
+			};
+			name = Debug;
+		};
+		DA17D095277C63060039063C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.solid.app.vgsCollectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vgsCollect.app/vgsCollect";
+			};
+			name = Release;
+		};
+		DA17D097277C63060039063C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.solid.app.vgsCollectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = vgsCollect;
+			};
+			name = Debug;
+		};
+		DA17D098277C63060039063C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.solid.app.vgsCollectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = vgsCollect;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA17D061277C63040039063C /* Build configuration list for PBXProject "vgsCollect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA17D08E277C63060039063C /* Debug */,
+				DA17D08F277C63060039063C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA17D090277C63060039063C /* Build configuration list for PBXNativeTarget "vgsCollect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA17D091277C63060039063C /* Debug */,
+				DA17D092277C63060039063C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA17D093277C63060039063C /* Build configuration list for PBXNativeTarget "vgsCollectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA17D094277C63060039063C /* Debug */,
+				DA17D095277C63060039063C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA17D096277C63060039063C /* Build configuration list for PBXNativeTarget "vgsCollectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA17D097277C63060039063C /* Debug */,
+				DA17D098277C63060039063C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DA17D099277C84220039063C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		DA17D09C277C846C0039063C /* XCRemoteSwiftPackageReference "vgs-collect-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/verygoodsecurity/vgs-collect-ios.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		DAB5621A277D8054001B997B /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jdg/MBProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		DAB5621D277D852F001B997B /* XCRemoteSwiftPackageReference "vgs-show-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/verygoodsecurity/vgs-show-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA17D09A277C84220039063C /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA17D099277C84220039063C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		DA17D09D277C846C0039063C /* VGSCollectSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA17D09C277C846C0039063C /* XCRemoteSwiftPackageReference "vgs-collect-ios" */;
+			productName = VGSCollectSDK;
+		};
+		DAB5621B277D8054001B997B /* MBProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAB5621A277D8054001B997B /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
+			productName = MBProgressHUD;
+		};
+		DAB5621E277D852F001B997B /* VGSShowSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAB5621D277D852F001B997B /* XCRemoteSwiftPackageReference "vgs-show-ios" */;
+			productName = VGSShowSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = DA17D05E277C63040039063C /* Project object */;
+}
