@@ -22,7 +22,7 @@ git clone https://github.com/solidfi/vgs-collect-ios.git
 ```
 - Open project and run in Simulator
 ```groovy
-1. Launch `Xcode` and open the project `vgsCollect/vgsCollect.xcodeproj`
+1. Launch `Xcode` and open the project `vgs-collect-ios-main/vgsCollect.xcodeproj`
 2. Run in Simulator
 ```
 
