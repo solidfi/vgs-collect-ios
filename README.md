@@ -14,7 +14,7 @@ Using VGSCollect sdk we can set a pin for the cards
 
 ## Getting started
 Configure VGSCollect Sample :
-- Clone respository
+- Clone repository
 ```groovy
 git clone git@github.com:solidfi/vgs-collect-ios.git
 OR
@@ -28,13 +28,13 @@ git clone https://github.com/solidfi/vgs-collect-ios.git
 
 ## Parameters
 
-In order to start the project we need below parameters. All fields are mendatory
+In order to start the project we need below parameters. All fields are mandatory
 
 - VGSVaultID : Talk to our solutions team (solutions@solidfi.com) to get the ID via a secured method. (It will different base on sandbox and live)
 - CardID : Id of your card
 - CardToken : You will get it from the "pintoken" api from the backend
 - Environment :  Select live or sandbox environment
-- Last4CardDigit : Last 4 didit of card number
+- Last4CardDigit : Last 4 digit of card number
 - ExpMonth : Expiry month (MM) of the card
 - ExpYear : Expiry year (YYYY) of the card
 - 4DigitPin : Pin you want to set for the card (It should be numeric)
