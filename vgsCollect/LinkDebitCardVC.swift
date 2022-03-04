@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LinkDebitCardVC.swift
 //  vgsCollect
 //
 //  Created by Copyright © 2022 Solid. All rights reserved.
@@ -8,32 +8,32 @@
 import UIKit
 import MBProgressHUD
 
-class VGSController: UIViewController {
-    
+class LinkDebitCardVC: UIViewController {
+
     @IBOutlet weak var txtVGSVaultID: UITextField!
     @IBOutlet weak var txtCardToken: UITextField!
-    @IBOutlet weak var txtCardID: UITextField!
+    @IBOutlet weak var txtContactID: UITextField!
     @IBOutlet weak var txtEnvironment: UITextField!
-    @IBOutlet weak var txtLast4CardDigit: UITextField!
+    @IBOutlet weak var txtCardNumber: UITextField!
     @IBOutlet weak var txtExpMonth: UITextField!
     @IBOutlet weak var txtExpYear: UITextField!
-    @IBOutlet weak var txt4DigitPin: UITextField!
     @IBOutlet weak var btnSubmit: UIButton!
     
     var vgsModalView = VGSModalView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Set PIN"
+        
+        self.title = "Link Debit Card"
     }
-    
+
     @IBAction func btnSubmitPress(_ sender: Any) {
         self.validationCheck()
     }
 }
 
 // MARK: - Textfield delegate method
-extension VGSController: UITextFieldDelegate {
+extension LinkDebitCardVC: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == txtEnvironment {
             self.showEnvironmentActionSheet()
@@ -41,7 +41,7 @@ extension VGSController: UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if textField == txtExpYear || textField == txtLast4CardDigit || textField == txt4DigitPin {
+        if textField == txtExpYear {
             return vgsModalView.validateTextField(validateTextField: textField, validateText: string)
         } else if textField == txtExpMonth {
             return vgsModalView.validateTextField(validateTextField: textField, validateText: string)
@@ -61,8 +61,7 @@ extension VGSController: UITextFieldDelegate {
 }
 
 // MARK: - Setup UI and Validation methods
-extension VGSController {
-
+extension LinkDebitCardVC {
     func showEnvironmentActionSheet() {
         self.view.endEditing(true)
         let alert = UIAlertController(title: "" , message: "Please select Environment", preferredStyle: .actionSheet)
@@ -80,20 +79,24 @@ extension VGSController {
     }
     
     func validationCheck() {
-        if let cardID = txtCardID.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
-            vgsModalView.vgsCardID = cardID
+        if let vaultID = txtVGSVaultID.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
+            vgsModalView.vgsVaultID = vaultID
+        }
+        
+        if let contactID = txtContactID.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
+            vgsModalView.vgsContactID = contactID
         }
         
         if let cardToken = txtCardToken.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
             vgsModalView.vgsCardToken = cardToken
         }
         
-        if let digitPin = txt4DigitPin.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
-            vgsModalView.vgsDigitPin = digitPin
-        }
-        
         if let environment = txtEnvironment.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
             vgsModalView.vgsEnvironmentType = environment
+        }
+        
+        if let cardNumber = txtCardNumber.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
+            vgsModalView.vgsCardNumber = cardNumber
         }
         
         if let expMonth = txtExpMonth.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
@@ -104,15 +107,7 @@ extension VGSController {
             vgsModalView.vgsExpYear = expYear
         }
         
-        if let vaultID = txtVGSVaultID.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
-            vgsModalView.vgsVaultID = vaultID
-        }
-        
-        if let cardLast4Digit = txtLast4CardDigit.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
-            vgsModalView.vgsLast4CardDigit = cardLast4Digit
-        }
-        
-        self.vgsModalView.validationCheck { (isValid,msg) in
+        self.vgsModalView.validationCheckForLinkCard { (isValid,msg) in
             if !isValid {
                 let alert = UIAlertController(title: "", message: msg, preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
@@ -125,10 +120,10 @@ extension VGSController {
 }
 
 // MARK: - VGS Collect API Call
-extension VGSController {
+extension LinkDebitCardVC {
     func callVGSCollectAPI(){
         let progressHUD = MBProgressHUD.showAdded(to: self.view, animated: true)
-        self.vgsModalView.callVGSAPI { (isValid,msg) in
+        self.vgsModalView.callVGSAPIToLinkCard { (isValid,msg) in
             progressHUD.hide(animated: true)
             let alert = UIAlertController(title: "", message: msg, preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))

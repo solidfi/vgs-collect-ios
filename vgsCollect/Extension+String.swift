@@ -2,7 +2,7 @@
 //  Extension+String.swift
 //  vgsCollect
 //
-//  Created by Copyright © 2021 Solid. All rights reserved.
+//  Created by Copyright © 2022 Solid. All rights reserved.
 //
 
 import Foundation

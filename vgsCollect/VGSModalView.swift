@@ -2,7 +2,7 @@
 //  VGSModalView.swift
 //  vgsCollect
 //
-//  Copyright © 2021 Solid. All rights reserved.
+//  Copyright © 2022 Solid. All rights reserved.
 //
 
 import Foundation
@@ -11,12 +11,13 @@ import VGSCollectSDK
 import VGSShowSDK
 
 class VGSModalView {
-    
     var vgsVaultID = String()
     var vgsCardToken = String()
     var vgsCardID = String()
+    var vgsContactID = String() //for Link Card
     var vgsEnvironmentType = String()
     var vgsLast4CardDigit = String()
+    var vgsCardNumber = String() //for Link Card
     var vgsExpMonth = String()
     var vgsExpYear = String()
     var vgsDigitPin = String()
@@ -24,6 +25,16 @@ class VGSModalView {
     
     func validationCheck(completion:@escaping((Bool, String?) -> Void)) {
         if  vgsVaultID == "" || vgsExpYear == "" || vgsCardToken == "" || vgsCardID == "" || vgsEnvironmentType == "" || vgsLast4CardDigit == "" || vgsExpMonth == "" || vgsDigitPin == "" {
+            completion(false,"All fields are mendatory")
+        } else if !vgsExpYear.isYearGreate{
+            completion(false,"Expiration year should be greater or equal to current year!")
+        } else {
+            completion(true,nil)
+        }
+    }
+    
+    func validationCheckForLinkCard(completion:@escaping((Bool, String?) -> Void)) {
+        if  vgsVaultID == "" || vgsExpYear == "" || vgsCardToken == "" || vgsContactID == "" || vgsEnvironmentType == "" || vgsCardNumber == "" || vgsExpMonth == "" {
             completion(false,"All fields are mendatory")
         } else if !vgsExpYear.isYearGreate{
             completion(false,"Expiration year should be greater or equal to current year!")
@@ -65,7 +76,7 @@ class VGSModalView {
     }
 }
 
-// MARK: - VGS Collect API Call
+// MARK: - VGS Collect API Call for Set PIN
 extension VGSModalView {
     func callVGSAPI(completion:@escaping((Bool, String?) -> Void)) {
 
@@ -93,6 +104,67 @@ extension VGSModalView {
                 if let data = data, let jsonData = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                    debugPrint(jsonData)
                     completion(true, "Pin set successfully")
+                } else {
+                    completion(true, nil)
+                }
+                return
+            case .failure(let code, _, _, let error):
+                switch code {
+                case 400..<499:
+                    debugPrint("Error: Wrong Request, code: \(code)")
+                case VGSErrorType.inputDataIsNotValid.rawValue:
+                    if let error = error as? VGSError {
+                        debugPrint("Error: Input data is not valid. Details:\n \(error)")
+                    }
+                default:
+                    debugPrint("Error: Something went wrong. Code: \(code)")
+                }
+                completion(false, "Something went wrong, please try again.")
+                print("Submit request error: \(code), \(String(describing: error))")
+                return
+            }
+        }
+    }
+}
+
+// MARK: - VGS Collect API Call to Link Debit card
+extension VGSModalView {
+    
+    func callVGSAPIToLinkCard(completion:@escaping((Bool, String?) -> Void)) {
+
+        let environment = vgsEnvironmentType == "Sandbox" ? VGSEnvironment.sandbox : VGSEnvironment.live
+
+        let vgsCollect = VGSCollect(id: vgsVaultID, environment: environment.rawValue)
+
+        let param = ["debitCard": ["cardNumber": vgsCardNumber,
+                          "expiryMonth": vgsExpMonth,
+                          "expiryYear": vgsExpYear,
+                          //This is dummy address data..
+                          //Use your card address data here...
+                          "address": ["addressType": "card",
+                                      "line1": "1250 Waters Pl",
+                                      "line2": "",
+                                      "city": "Bronx",
+                                      "state": "NY",
+                                      "postalCode": "10461",
+                                      "country": "US"
+                                     ]]]  as [String : Any]
+    
+        vgsCollect.customHeaders = [
+            "sd-debitcard-token": vgsCardToken,
+            "content-type": "application/json;charset=UTF-8"
+        ]
+        
+        self.path = "/v1/contact/\(vgsContactID)/debitcard"
+        
+        vgsCollect.sendData(path: self.path, method: .patch, extraData: param as [String: Any]) {(response) in
+            
+            switch response {
+                
+            case .success(_, let data, _):
+                if let data = data, let jsonData = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                   debugPrint(jsonData)
+                    completion(true, "Card linked successfully")
                 } else {
                     completion(true, nil)
                 }

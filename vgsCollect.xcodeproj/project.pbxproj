@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1818248D27D239EA006C20B8 /* OptionsSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818248C27D239EA006C20B8 /* OptionsSelectionVC.swift */; };
+		1818248F27D23B3C006C20B8 /* LinkDebitCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818248E27D23B3C006C20B8 /* LinkDebitCardVC.swift */; };
 		DA17D06A277C63040039063C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17D069277C63040039063C /* AppDelegate.swift */; };
 		DA17D06E277C63040039063C /* VGSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17D06D277C63040039063C /* VGSController.swift */; };
 		DA17D071277C63040039063C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA17D06F277C63040039063C /* Main.storyboard */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1818248C27D239EA006C20B8 /* OptionsSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsSelectionVC.swift; sourceTree = "<group>"; };
+		1818248E27D23B3C006C20B8 /* LinkDebitCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDebitCardVC.swift; sourceTree = "<group>"; };
 		DA17D066277C63040039063C /* vgsCollect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vgsCollect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA17D069277C63040039063C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA17D06D277C63040039063C /* VGSController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGSController.swift; sourceTree = "<group>"; };
@@ -110,7 +114,9 @@
 			isa = PBXGroup;
 			children = (
 				DA17D069277C63040039063C /* AppDelegate.swift */,
+				1818248C27D239EA006C20B8 /* OptionsSelectionVC.swift */,
 				DA17D06D277C63040039063C /* VGSController.swift */,
+				1818248E27D23B3C006C20B8 /* LinkDebitCardVC.swift */,
 				DA17D09F277C8C2A0039063C /* VGSModalView.swift */,
 				DA17D0A1277C98AC0039063C /* Extension+String.swift */,
 				DA17D06F277C63040039063C /* Main.storyboard */,
@@ -282,6 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA17D0A2277C98AC0039063C /* Extension+String.swift in Sources */,
+				1818248D27D239EA006C20B8 /* OptionsSelectionVC.swift in Sources */,
+				1818248F27D23B3C006C20B8 /* LinkDebitCardVC.swift in Sources */,
 				DA17D06E277C63040039063C /* VGSController.swift in Sources */,
 				DA17D06A277C63040039063C /* AppDelegate.swift in Sources */,
 				DA17D0A0277C8C2A0039063C /* VGSModalView.swift in Sources */,
