@@ -5,8 +5,8 @@
 - [Getting started](#getting-started)
 - [Parameters](#parameters)
 - [Tooling](#tooling)
-- [API Reference](#api-reference)
 - [Packages](#third-party-libraries)
+- [API Reference](#api-reference)
 
 
 ## Overview
@@ -59,12 +59,12 @@ Notes: "Debit Card Token" can be used only once to link card. You need to call "
 - Xcode 11 +
 - Swift 5.0 +
 
-## API Reference
-- VGS Collect Integration : https://www.verygoodsecurity.com/docs/vgs-collect/ios-sdk/integration
-- Solid API Integration : https://documenter.getpostman.com/view/13543869/TWDfEDwX#ce8c0e57-0dcf-45ea-87d8-6f03a302e027
-
 ## Packages
 - VGSShowSDK
 - VGSCollectSDK
 - IQKeyboardManager
 - MBProgressHUD
+
+## API Reference
+- VGS Collect Integration : https://www.verygoodsecurity.com/docs/vgs-collect/ios-sdk/integration
+- Solid API Integration : https://www.solidfi.com/docs/introduction
