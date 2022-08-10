@@ -31,7 +31,7 @@ git clone https://github.com/solidfi/vgs-collect-ios.git
 In order to start the project we need below parameters. All fields are mandatory
 
 //For Set PIN
-- VGS Vault ID : The VGS vault ID's required for implementing the sample code can be requested via a Solid help desk ticket.
+- VGS Vault ID : The VGS vault ID's required for implementing the sample code can be requested via a Solid Help desk ticket.
 - Card ID : Id of your card
 - Debit Card Token : You will get it from the "pintoken" api from the backend
 - Environment :  Select live or sandbox environment
