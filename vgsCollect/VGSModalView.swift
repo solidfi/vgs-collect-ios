@@ -141,12 +141,11 @@ extension VGSModalView {
                           "expiryYear": vgsExpYear,
                           //This is dummy address data..
                           //Use your card address data here...
-                          "address": ["addressType": "card",
-                                      "line1": "1250 Waters Pl",
+                          "address": ["line1": "12340 Boggy Creek Rd",
                                       "line2": "",
-                                      "city": "Bronx",
-                                      "state": "NY",
-                                      "postalCode": "10461",
+                                      "city": "Orlando",
+                                      "state": "FL",
+                                      "postalCode": "32824",
                                       "country": "US"
                                      ]]]  as [String : Any]
     
