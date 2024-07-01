@@ -94,7 +94,7 @@ extension VGSModalView {
             "content-type": "application/json;charset=UTF-8"
         ]
         
-        self.path = "/v1/card/\(vgsCardID)/pin"
+        self.path = "/v2/card/\(vgsCardID)/pin"
         
         vgsCollect.sendData(path: self.path, method: .post, extraData: param as [String: Any]) {(response) in
             
@@ -154,7 +154,7 @@ extension VGSModalView {
             "content-type": "application/json;charset=UTF-8"
         ]
         
-        self.path = "/v1/contact/\(vgsContactID)/debitcard"
+        self.path = "/v2/contact/\(vgsContactID)/debitcard"
         
         vgsCollect.sendData(path: self.path, method: .patch, extraData: param as [String: Any]) {(response) in
             
